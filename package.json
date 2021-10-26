@@ -8,9 +8,9 @@
     "docs:dev": "vitepress dev docs --host --port 8090",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "dev:theme": "vue-tsc --noEmit -w -p src/theme",
+    "dev:theme": "tsc -w -p src/theme",
     "build": "run-p build:theme copy:theme",
-    "build:theme": "vue-tsc --noEmit -p src/theme",
+    "build:theme": "tsc -p src/theme",
     "copy:theme": "node scripts/copyClient.js",
     "watch:theme": "node scripts/watchAndCopy.js"
   },
@@ -29,8 +29,7 @@
     "markdown-it": "^12.2.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^4.4.4",
-    "vitepress-custom": "^0.1.3",
-    "vue-tsc": "^0.28.9"
+    "vitepress-custom": "^0.1.3"
   },
   "dependencies": {
     "vue": "^3.2.20"

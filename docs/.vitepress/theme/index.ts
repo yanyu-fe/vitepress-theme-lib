@@ -1,6 +1,6 @@
-import DefaultTheme from "../../../dist/theme/theme-dumi"
+import DefaultTheme from "../../../src/theme/theme-dumi"
 import { EnhanceAppContext } from "vitepress-custom"
-import { CodeDemo } from "../../../dist/theme/code-demo"
+import CodeDemo from "../../../src/theme/code-demo/CodeDemo.vue"
 export default {
     ...DefaultTheme,
     enhanceApp:function (ctx:EnhanceAppContext) {

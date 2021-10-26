@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress-custom"
 
-import { CodePlugin } from "../../dist/theme/code-demo"
+import { CodePlugin } from "../../src/theme/code-demo"
 
 // @ts-ignore
 import MarkdownIt from "markdown-it"

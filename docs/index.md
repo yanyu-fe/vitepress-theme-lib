@@ -5,7 +5,7 @@
 <demo title="测试标题" desc="测试描述">测试内容</demo>
 
 
-<demo>
+<demo src="sdsads">
     <template #title>
         测试标题插槽
     </template>
