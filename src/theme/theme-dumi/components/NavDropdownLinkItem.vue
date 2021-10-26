@@ -10,7 +10,8 @@ const props = defineProps<{
 
 const propsRefs = toRefs(props)
 
-const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
+// @ts-ignore
+const { linkProps, isExternal } = useNavLink(propsRefs.item)
 </script>
 
 <template>

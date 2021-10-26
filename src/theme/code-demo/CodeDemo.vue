@@ -25,4 +25,5 @@ const props = defineProps<{
   copySource?:string
 }>()
 // 动态加载组件
+console.log(props);
 </script>

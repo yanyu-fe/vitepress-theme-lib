@@ -9,14 +9,14 @@ const props = defineProps<{
 }>()
 
 const propsRefs = toRefs(props)
-
-const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
+// @ts-ignore
+const { linkProps, isExternal } = useNavLink(propsRefs.item)
 </script>
 
 <template>
   <div class="nav-link">
-    <a class="item" v-bind="linkProps">
-      {{ item.text }} <OutboundLink v-if="isExternal" />
+    <a class="item" v-bind="linkProps&&linkProps">
+      {{ item&&item.text }} <OutboundLink v-if="isExternal&&isExternal" />
     </a>
   </div>
 </template>

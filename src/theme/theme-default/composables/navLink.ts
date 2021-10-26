@@ -3,12 +3,14 @@ import { useRoute, withBase } from 'vitepress-custom'
 import { isExternal as isExternalCheck } from '../utils'
 import type { DefaultTheme } from '../config'
 
+
+
 export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
   const route = useRoute()
 
   const isExternal = isExternalCheck(item.value.link)
 
-  const props = computed(() => {
+  const linkProps = computed(() => {
     const routePath = normalizePath(`/${route.data.relativePath}`)
 
     let active = false
@@ -28,14 +30,14 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
         isExternal
       },
       href: isExternal ? item.value.link : withBase(item.value.link),
-      target: item.value.target || (isExternal ? `_blank` : null),
-      rel: item.value.rel || (isExternal ? `noopener noreferrer` : null),
+      target: item.value.target || (isExternal ? `_blank` : undefined),
+      rel: item.value.rel || (isExternal ? `noopener noreferrer` : undefined),
       'aria-label': item.value.ariaLabel
     }
   })
 
   return {
-    props,
+    linkProps,
     isExternal
   }
 }

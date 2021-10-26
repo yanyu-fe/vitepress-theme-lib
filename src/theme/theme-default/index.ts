@@ -8,9 +8,9 @@ import { Theme } from 'vitepress-custom'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 
-const theme = {
+const theme:Theme = {
   Layout,
   NotFound
-} as  Theme
+}
 
 export default theme
