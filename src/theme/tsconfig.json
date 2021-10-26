@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/theme",
+    "target": "esnext",
+    "sourceMap": false,
+    "lib": ["ESNext", "DOM"],
+    "types": ["vite/client"],
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": ["."]
+}
